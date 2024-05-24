@@ -1,3 +1,4 @@
+
 /*
  * SPDX-License-Identifier: GPL-3.0-only
  * MuseScore-CLA-applies
@@ -50,6 +51,13 @@ FocusScope {
             if (active) {
                 root.forceActiveFocus()
             }
+        }
+    }
+
+    Shortcut {
+        sequences: [StandardKey.Find]
+        onActivated: {
+            searchField.forceActiveFocus()
         }
     }
 
@@ -216,7 +224,6 @@ FocusScope {
             sideMargin: prv.sideMargin
         }
 
-
         //! NOTE: see https://github.com/musescore/MuseScore/issues/14886
         /*
         Playlist {
@@ -260,4 +267,3 @@ FocusScope {
         }
     }
 }
-

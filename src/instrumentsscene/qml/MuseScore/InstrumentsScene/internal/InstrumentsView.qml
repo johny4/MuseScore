@@ -1,3 +1,4 @@
+
 /*
  * SPDX-License-Identifier: GPL-3.0-only
  * MuseScore-Studio-CLA-applies
@@ -70,6 +71,13 @@ Item {
 
         onSearchTextChanged: {
             root.instrumentsModel.setSearchText(searchText)
+        }
+    }
+
+    Shortcut {
+        sequences: [StandardKey.Find]
+        onActivated: {
+            searchField.forceActiveFocus()
         }
     }
 

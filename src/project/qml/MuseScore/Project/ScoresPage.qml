@@ -1,3 +1,4 @@
+
 /*
  * SPDX-License-Identifier: GPL-3.0-only
  * MuseScore-Studio-CLA-applies
@@ -106,6 +107,13 @@ FocusScope {
             navigation.panel: navSearchPanel
             navigation.order: 1
             accessible.name: qsTrc("project", "Search recent scores")
+        }
+    }
+
+    Shortcut {
+        sequences: [StandardKey.Find]
+        onActivated: {
+            searchField.forceActiveFocus()
         }
     }
 

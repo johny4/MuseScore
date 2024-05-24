@@ -1,3 +1,4 @@
+
 /*
  * SPDX-License-Identifier: GPL-3.0-only
  * MuseScore-Studio-CLA-applies
@@ -48,6 +49,13 @@ FocusScope {
             if (active) {
                 root.forceActiveFocus()
             }
+        }
+    }
+
+    Shortcut {
+        sequences: [StandardKey.Find]
+        onActivated: {
+            searchField.forceActiveFocus()
         }
     }
 
