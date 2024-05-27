@@ -371,4 +371,12 @@ FocusScope {
             }
         }
     }
+
+    // Add the shortcut for Find (Ctrl+F)
+    Shortcut {
+        sequence: StandardKey.Find
+        onActivated: {
+            searchField.forceActiveFocus()
+        }
+    }
 }

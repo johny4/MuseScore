@@ -53,6 +53,14 @@ FocusScope {
         }
     }
 
+    // Add the shortcut for Find (Ctrl+F)
+    Shortcut {
+        sequences: [StandardKey.Find]
+        onActivated: {
+            searchField.forceActiveFocus()
+        }
+    }
+
     onSectionChanged: {
         if (!Boolean(root.section)) {
             return
@@ -216,7 +224,6 @@ FocusScope {
             sideMargin: prv.sideMargin
         }
 
-
         //! NOTE: see https://github.com/musescore/MuseScore/issues/14886
         /*
         Playlist {
@@ -260,4 +267,3 @@ FocusScope {
         }
     }
 }
-
